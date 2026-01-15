@@ -29,22 +29,15 @@ const allExperiences = [
   {
     role: "QA Engineer",
     company: "Kirobo",
-    period: "2021 - 2022",
+    period: "2023 - 2025",
     description: "Manual and automatic QA testing for crypto-wallets and DeFi products. Writing and maintaining test automation scripts.",
     type: "work" as const
   },
   {
-    role: "Technologies consultant",
-    company: "Matrix",
-    period: "2017 - Present",
-    description: "Project R&D management in a wide variety of security organizations. AI & ML research and implementation project. Research, development and implementation of embedded operating systems and hardware.",
-    type: "work" as const
-  },
-  {
-    role: "Cyber systems lab expert",
-    company: "Ministry of Defense",
+    role: "Technologies consultant & Cyber systems lab expert",
+    company: "Matrix / Ministry of Defense",
     period: "2015 - 2017",
-    description: "Cyber system lab engineering, integrations and operations experts. Working closely with field operatives, adjusting and instructing for cyber systems as needed. Bootstrapping and field testing cyber systems, including installment and operational adjustment. Built the laboratory from the ground up, including designing the space, acquiring the necessary equipment, and hiring and training the staff. Developed new cyber and forensic tools for the field unit, which improved the efficiency and effectiveness of their investigations.",
+    description: "Project R&D management in a wide variety of security organizations. AI & ML research and implementation project. Research, development and implementation of embedded operating systems and hardware. Cyber system lab engineering, integrations and operations experts. Working closely with field operatives, adjusting and instructing for cyber systems as needed. Bootstrapping and field testing cyber systems, including installment and operational adjustment. Built the laboratory from the ground up, including designing the space, acquiring the necessary equipment, and hiring and training the staff. Developed new cyber and forensic tools for the field unit, which improved the efficiency and effectiveness of their investigations.",
     type: "work" as const
   },
   {
@@ -70,8 +63,21 @@ const allExperiences = [
   }
 ];
 
-export const workExperiences = allExperiences.filter(e => e.type === 'work');
-export const educationHistory = allExperiences.filter(e => e.type === 'education');
+export const workExperiences = allExperiences.filter(e => e.type === 'work').sort((a, b) => {
+    const aEnd = a.period.split(' - ')[1];
+    const bEnd = b.period.split(' - ')[1];
+    if (bEnd === 'Present') return 1;
+    if (aEnd === 'Present') return -1;
+    return parseInt(bEnd, 10) - parseInt(aEnd, 10);
+});
+
+export const educationHistory = allExperiences.filter(e => e.type === 'education').sort((a, b) => {
+    const aEnd = a.period.split(' - ')[1];
+    const bEnd = b.period.split(' - ')[1];
+    if (bEnd === 'Present') return 1;
+    if (aEnd === 'Present') return -1;
+    return parseInt(bEnd, 10) - parseInt(aEnd, 10);
+});
 
 
 export const skills = [
