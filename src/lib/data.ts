@@ -1,3 +1,4 @@
+
 import { Github, Linkedin, Mail } from 'lucide-react';
 
 export const profile = {
@@ -24,7 +25,7 @@ export const contactInfo = [
     }
 ];
 
-export const experiences = [
+const allExperiences = [
   {
     role: "Technologies consultant",
     company: "Matrix",
@@ -62,6 +63,10 @@ export const experiences = [
   }
 ];
 
+export const workExperiences = allExperiences.filter(e => e.type === 'work');
+export const educationHistory = allExperiences.filter(e => e.type === 'education');
+
+
 export const skills = [
   { name: "Strategic thinking", proficiency: 90 },
   { name: "Negotiation skills", proficiency: 85 },
@@ -74,5 +79,6 @@ export const skills = [
 
 export const navigationLinks = [
     { name: "Experience", href: "#experience"},
+    { name: "Education", href: "#education"},
     { name: "Skills", href: "#skills"},
 ]

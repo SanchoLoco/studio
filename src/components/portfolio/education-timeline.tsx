@@ -1,26 +1,26 @@
 
-import { Briefcase } from "lucide-react";
-import { workExperiences } from "@/lib/data";
+import { GraduationCap } from "lucide-react";
+import { educationHistory } from "@/lib/data";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
-export function ExperienceTimeline() {
+export function EducationTimeline() {
   return (
-    <section id="experience" className="py-20 md:py-28">
+    <section id="education" className="py-20 md:py-28 bg-secondary">
       <div className="container">
         <h2 className="text-3xl md:text-4xl font-headline font-bold text-center mb-12">
-          My Journey
+          Education
         </h2>
         <div className="relative max-w-3xl mx-auto">
           <div className="absolute left-1/2 -translate-x-1/2 w-0.5 h-full bg-border" aria-hidden="true"></div>
           
-          {workExperiences.map((item, index) => (
+          {educationHistory.map((item, index) => (
             <div key={index} className={`relative mb-8 flex justify-between items-start w-full`}>
               <div className={`w-[calc(50%-2rem)] ${index % 2 === 0 ? 'order-1' : 'order-3 text-right'}`}>
               </div>
 
-              <div className="z-10 flex items-center justify-center w-12 h-12 rounded-full bg-secondary shadow-md order-2">
-                <Briefcase className="w-6 h-6 text-primary" />
+              <div className="z-10 flex items-center justify-center w-12 h-12 rounded-full bg-background shadow-md order-2">
+                <GraduationCap className="w-6 h-6 text-primary" />
               </div>
 
               <div className={`w-[calc(50%-2rem)] ${index % 2 === 0 ? 'order-3' : 'order-1'}`}>
@@ -29,10 +29,10 @@ export function ExperienceTimeline() {
                     <div className="flex justify-between items-start flex-col sm:flex-row gap-2">
                         <div>
                             <CardTitle className="font-headline text-xl mb-1">
-                                {item.role}
+                                {item.degree}
                             </CardTitle>
                             <CardDescription className="text-base">
-                                {item.company}
+                                {item.institution}
                             </CardDescription>
                         </div>
                         <Badge variant="secondary" className="whitespace-nowrap">{item.period}</Badge>

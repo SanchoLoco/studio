@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import { profile, contactInfo } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -24,7 +25,7 @@ export function Hero() {
               <a href={contactInfo.find(c => c.name === 'Email')?.href}>Contact Me</a>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <a href="#experience">My Experience</a>
+              <a href="#experience">My Journey</a>
             </Button>
           </div>
         </div>
