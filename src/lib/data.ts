@@ -26,10 +26,10 @@ export const contactInfo = [
 
 export const experiences = [
   {
-    role: "Cyber security and forensics R&D",
-    company: "Prime Minister Office",
-    period: "2012 - 2015",
-    description: "Full mandatory 3 years service and continued working at prime minister office. Expertise in Cyber and Forensic, Research, development and integration of new equipment and technologies, Development experience with Linux, Windows, MacOS, Execution of QA for hardware and software in high strict standards, and performing of tutorials and courses for up to 30 people.",
+    role: "Technologies consultant",
+    company: "Matrix",
+    period: "2017 - Present",
+    description: "Project R&D management in a wide variety of security organizations. AI & ML research and implementation project. Research, development and implementation of embedded operating systems and hardware.",
     type: "work" as const
   },
   {
@@ -40,17 +40,17 @@ export const experiences = [
     type: "work" as const
   },
   {
-    role: "Technologies consultant",
-    company: "Matrix",
-    period: "2015 - 2017",
-    description: "Project R&D management in a wide variety of security organizations. AI & ML research and implementation project. Research, development and implementation of embedded operating systems and hardware.",
+    role: "Cyber security and forensics R&D",
+    company: "Prime Minister Office",
+    period: "2012 - 2015",
+    description: "Full mandatory 3 years service and continued working at prime minister office. Expertise in Cyber and Forensic, Research, development and integration of new equipment and technologies, Development experience with Linux, Windows, MacOS, Execution of QA for hardware and software in high strict standards, and performing of tutorials and courses for up to 30 people.",
     type: "work" as const
   },
   {
     degree: "Transformational Program",
     institution: "Mindvalley University",
-    period: "2018 - Present",
-    description: "One mount in a year of personal transformation.",
+    period: "2018",
+    description: "One month in a year of personal transformation.",
     type: "education" as const
   },
   {

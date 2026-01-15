@@ -14,15 +14,9 @@ export function ExperienceTimeline() {
           <div className="absolute left-1/2 -translate-x-1/2 w-0.5 h-full bg-border" aria-hidden="true"></div>
           
           {experiences.map((item, index) => (
-            <div key={index} className="relative mb-8">
-              <div className="flex items-center mb-1">
-                <div className="z-10 flex items-center justify-center w-12 h-12 rounded-full bg-secondary shadow-md absolute left-1/2 -translate-x-1/2">
-                  {item.type === 'work' ? <Briefcase className="w-6 h-6 text-primary" /> : <GraduationCap className="w-6 h-6 text-primary" />}
-                </div>
-              </div>
-
-              <div className={`w-[calc(50%-2.5rem)] ${index % 2 === 0 ? 'ml-auto' : ''}`}>
-                <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div key={index} className="relative mb-8 flex justify-between items-center w-full">
+              <div className={`w-[calc(50%-2.5rem)] ${index % 2 !== 0 ? 'order-1 text-right' : ''}`}>
+                <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 text-left">
                   <CardHeader>
                     <div className="flex justify-between items-start">
                         <div>
@@ -40,6 +34,10 @@ export function ExperienceTimeline() {
                     <p className="text-sm text-muted-foreground">{item.description}</p>
                   </CardContent>
                 </Card>
+              </div>
+
+              <div className="z-10 flex items-center justify-center w-12 h-12 rounded-full bg-secondary shadow-md absolute left-1/2 -translate-x-1/2">
+                {item.type === 'work' ? <Briefcase className="w-6 h-6 text-primary" /> : <GraduationCap className="w-6 h-6 text-primary" />}
               </div>
             </div>
           ))}
