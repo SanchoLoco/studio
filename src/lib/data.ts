@@ -54,5 +54,4 @@ export const skills = [
 export const navigationLinks = [
     { name: "Experience", href: "#experience"},
     { name: "Skills", href: "#skills"},
-    { name: "AI CV Tool", href: "#ai-cv-tool"},
 ]

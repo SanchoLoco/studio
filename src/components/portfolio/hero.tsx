@@ -20,11 +20,11 @@ export function Hero() {
             {profile.bio}
           </p>
           <div className="flex gap-4 pt-4">
-            <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-              <a href="#ai-cv-tool">Enhance Your CV</a>
-            </Button>
-             <Button asChild variant="outline" size="lg">
+             <Button asChild variant="default" size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
               <a href={contactInfo.find(c => c.name === 'Email')?.href}>Contact Me</a>
+            </Button>
+            <Button asChild variant="outline" size="lg">
+              <a href="#experience">My Experience</a>
             </Button>
           </div>
         </div>

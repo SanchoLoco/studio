@@ -3,7 +3,6 @@ import { Footer } from '@/components/layout/footer';
 import { Hero } from '@/components/portfolio/hero';
 import { ExperienceTimeline } from '@/components/portfolio/experience-timeline';
 import { SkillsGraph } from '@/components/portfolio/skills-graph';
-import { CvEnhancer } from '@/components/portfolio/cv-enhancer';
 
 export default function Home() {
   return (
@@ -13,7 +12,6 @@ export default function Home() {
         <Hero />
         <ExperienceTimeline />
         <SkillsGraph />
-        <CvEnhancer />
       </main>
       <Footer />
     </div>
