@@ -1,6 +1,6 @@
 "use client";
 
-import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis, Tooltip } from "recharts";
+import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis, Tooltip, LabelList } from "recharts";
 import { skills } from "@/lib/data";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { ChartContainer, ChartTooltip, ChartTooltipContent, type ChartConfig } from "@/components/ui/chart";
