@@ -47,10 +47,10 @@ const allExperiences = [
     type: "work" as const
   },
   {
-    degree: "B.Sc. in Computer & Information Systems Security",
-    institution: "Ben-Gurion University of the Negev",
-    period: "2017 - 2021",
-    description: "Studied network security, cryptography, and ethical hacking.",
+    degree: "B.A. in Management",
+    institution: "Ben-Gurion University of The Negev",
+    period: "2025 - 2026",
+    description: "3rd-year student at The Guilford Glazer Faculty Of Business And Management. Studies commenced on 26.10.2025 and will end on summer of 2026.",
     type: "education" as const
   },
   {
