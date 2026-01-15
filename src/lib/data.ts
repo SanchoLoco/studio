@@ -27,6 +27,13 @@ export const contactInfo = [
 
 const allExperiences = [
   {
+    role: "QA Engineer",
+    company: "Kirobo",
+    period: "2021 - 2022",
+    description: "Manual and automatic QA testing for crypto-wallets and DeFi products. Writing and maintaining test automation scripts.",
+    type: "work" as const
+  },
+  {
     role: "Technologies consultant",
     company: "Matrix",
     period: "2017 - Present",
@@ -37,7 +44,7 @@ const allExperiences = [
     role: "Cyber systems lab expert",
     company: "Ministry of Defense",
     period: "2015 - 2017",
-    description: "Cyber system lab engineering, integrations and operations. Worked closely with field operatives. Bootstrapping and field testing cyber systems. Built the laboratory from the ground up, including designing the space, acquiring the necessary equipment, and hiring and training the staff. Developed new cyber and forensic tools for the field unit.",
+    description: "Cyber system lab engineering, integrations and operations experts. Working closely with field operatives, adjusting and instructing for cyber systems as needed. Bootstrapping and field testing cyber systems, including installment and operational adjustment. Built the laboratory from the ground up, including designing the space, acquiring the necessary equipment, and hiring and training the staff. Developed new cyber and forensic tools for the field unit, which improved the efficiency and effectiveness of their investigations.",
     type: "work" as const
   },
   {
@@ -50,7 +57,7 @@ const allExperiences = [
   {
     degree: "Transformational Program",
     institution: "Mindvalley University",
-    period: "2018",
+    period: "2018 - Present",
     description: "One month in a year of personal transformation.",
     type: "education" as const
   },
