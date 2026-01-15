@@ -26,6 +26,13 @@ export const contactInfo = [
 
 const allExperiences = [
   {
+    role: "Accounting Practitioner",
+    company: "Ben-Gurion University",
+    period: "2023 - Present",
+    description: "Accounting practitioner for students.",
+    type: "work" as const
+  },
+  {
     role: "QA Engineer",
     company: "Kirobo",
     period: "2023 - 2025",
