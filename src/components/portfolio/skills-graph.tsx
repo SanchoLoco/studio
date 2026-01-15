@@ -3,7 +3,14 @@
 import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis, Tooltip } from "recharts";
 import { skills } from "@/lib/data";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { ChartTooltipContent } from "@/components/ui/chart";
+import { ChartContainer, ChartTooltip, ChartTooltipContent, type ChartConfig } from "@/components/ui/chart";
+
+const chartConfig = {
+  proficiency: {
+    label: "Proficiency",
+    color: "hsl(var(--chart-1))",
+  },
+} satisfies ChartConfig;
 
 
 export function SkillsGraph() {
@@ -17,8 +24,8 @@ export function SkillsGraph() {
           </CardHeader>
           <CardContent>
             <div className="h-[400px] w-full">
-              <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={skills} layout="vertical" margin={{ left: 10, right: 30 }}>
+               <ChartContainer config={chartConfig} className="min-h-[200px] w-full">
+                <BarChart accessibilityLayer data={skills} layout="vertical" margin={{ left: 10, right: 30 }}>
                   <XAxis type="number" hide />
                   <YAxis 
                     dataKey="name" 
@@ -28,14 +35,14 @@ export function SkillsGraph() {
                     axisLine={false} 
                     tick={{ fill: "hsl(var(--foreground))", fontSize: 14 }}
                   />
-                  <Tooltip
+                  <ChartTooltip
                     cursor={{ fill: 'hsl(var(--muted))' }}
                     content={<ChartTooltipContent indicator="dot" />}
                   />
-                  <Bar dataKey="proficiency" radius={[0, 4, 4, 0]} barSize={30}>
+                  <Bar dataKey="proficiency" radius={[0, 4, 4, 0]} barSize={30} fill="var(--color-proficiency)">
                   </Bar>
                 </BarChart>
-              </ResponsiveContainer>
+              </ChartContainer>
             </div>
           </CardContent>
         </Card>
