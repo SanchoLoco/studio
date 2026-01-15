@@ -49,8 +49,8 @@ const allExperiences = [
   {
     degree: "B.A. in Management",
     institution: "Ben-Gurion University of The Negev",
-    period: "2025 - 2026",
-    description: "3rd-year student at The Guilford Glazer Faculty Of Business And Management. Studies commenced on 26.10.2025 and will end on summer of 2026.",
+    period: "2023 - 2026",
+    description: "3rd-year student at The Guilford Glazer Faculty Of Business And Management.",
     type: "education" as const
   },
   {
