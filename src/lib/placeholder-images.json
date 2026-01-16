@@ -3,8 +3,8 @@
     {
       "id": "hero-portrait",
       "description": "A professional portrait of Dror Teper.",
-      "imageUrl": "https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&w=600",
-      "imageHint": "male portrait"
+      "imageUrl": "/profile.jpg",
+      "imageHint": "profile picture"
     }
   ]
 }
