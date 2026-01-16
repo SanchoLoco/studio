@@ -29,7 +29,7 @@ const allExperiences = [
     role: "Accounting Practitioner",
     company: "Ben-Gurion University",
     period: "2023 - Present",
-    description: "Accounting practitioner for students.",
+    description: "Started by tutoring students in the reserves and now provide accounting practice sessions for students in face-to-face classroom settings.",
     type: "work" as const
   },
   {
@@ -84,7 +84,13 @@ export const workExperiences = allExperiences.filter(e => e.type === 'work').sor
     return parseInt(bEnd, 10) - parseInt(aEnd, 10);
 });
 
-export const educationHistory = allExperiences.filter(e => e.type === 'education');
+export const educationHistory = allExperiences.filter(e => e.type === 'education').sort((a, b) => {
+    const aEnd = a.period.split(' - ')[1];
+    const bEnd = b.period.split(' - ')[1];
+    if (aEnd === 'Present') return -1;
+    if (bEnd === 'Present') return 1;
+    return parseInt(bEnd, 10) - parseInt(aEnd, 10);
+});
 
 
 export const skills = [
