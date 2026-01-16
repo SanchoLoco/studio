@@ -1,9 +1,20 @@
+
 "use client";
 
-import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis, Tooltip, LabelList } from "recharts";
+import {
+  PolarGrid,
+  PolarAngleAxis,
+  Radar,
+  RadarChart,
+} from "recharts";
 import { skills } from "@/lib/data";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { ChartContainer, ChartTooltip, ChartTooltipContent, type ChartConfig } from "@/components/ui/chart";
+import {
+  ChartContainer,
+  ChartTooltip,
+  ChartTooltipContent,
+  type ChartConfig,
+} from "@/components/ui/chart";
 
 const chartConfig = {
   proficiency: {
@@ -11,7 +22,6 @@ const chartConfig = {
     color: "hsl(var(--chart-1))",
   },
 } satisfies ChartConfig;
-
 
 export function SkillsGraph() {
   return (
@@ -24,24 +34,18 @@ export function SkillsGraph() {
           </CardHeader>
           <CardContent>
             <div className="h-[400px] w-full">
-               <ChartContainer config={chartConfig} className="min-h-[200px] w-full">
-                <BarChart accessibilityLayer data={skills} layout="vertical" margin={{ left: 10, right: 30 }}>
-                  <XAxis type="number" hide />
-                  <YAxis 
-                    dataKey="name" 
-                    type="category" 
-                    width={150} 
-                    tickLine={false} 
-                    axisLine={false} 
-                    tick={{ fill: "hsl(var(--foreground))", fontSize: 14 }}
+              <ChartContainer config={chartConfig} className="mx-auto aspect-square max-h-[400px]">
+                <RadarChart data={skills}>
+                  <ChartTooltip cursor={false} content={<ChartTooltipContent indicator="line" />} />
+                  <PolarAngleAxis dataKey="name" />
+                  <PolarGrid />
+                  <Radar
+                    dataKey="proficiency"
+                    fill="var(--color-proficiency)"
+                    fillOpacity={0.6}
+                    stroke="var(--color-proficiency)"
                   />
-                  <ChartTooltip
-                    cursor={{ fill: 'hsl(var(--muted))' }}
-                    content={<ChartTooltipContent indicator="dot" />}
-                  />
-                  <Bar dataKey="proficiency" radius={[0, 4, 4, 0]} barSize={30} fill="var(--color-proficiency)">
-                  </Bar>
-                </BarChart>
+                </RadarChart>
               </ChartContainer>
             </div>
           </CardContent>
