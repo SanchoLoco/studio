@@ -68,7 +68,7 @@ export const educationHistory = [
     degree: "Transformational Program",
     institution: "Mindvalley University",
     period: "2018 - Present",
-    description: "One month in a year of personal transformation.",
+    description: "Completed a four-week intensive immersion in transformational leadership, holistic health, and advanced productivity through 100+ workshops led by global experts.",
   },
   {
     degree: "Hacking Defined Experts",
