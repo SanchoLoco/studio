@@ -89,7 +89,7 @@ export const workExperiences = allExperiences
         const parts = period.split(' - ');
         const yearStr = position === 'start' ? parts[0] : parts[1];
         if (yearStr === 'Present') {
-            // Use a high number to ensure "Present" is sorted as most recent, but not higher than future dates
+            // "Present" is considered the current year for sorting purposes.
             return new Date().getFullYear();
         }
         return parseInt(yearStr, 10);
@@ -111,7 +111,10 @@ export const workExperiences = allExperiences
 export const educationHistory = allExperiences
     .filter(e => e.type === 'education')
     .sort((a, b) => {
-        const getStartYear = (period: string) => parseInt(period.split(' - ')[0], 10);
+        const getStartYear = (period: string) => {
+            const yearStr = period.split(' - ')[0];
+            return parseInt(yearStr, 10);
+        };
         return getStartYear(b.period) - getStartYear(a.period);
     });
 
