@@ -85,7 +85,7 @@ const allExperiences = [
 export const workExperiences = allExperiences
   .filter(e => e.type === 'work')
   .sort((a, b) => {
-    const getYear = (period: string, position: 'start' | 'end') => {
+    const getYear = (period: string, position: 'end' | 'start') => {
         const parts = period.split(' - ');
         const yearStr = position === 'start' ? parts[0] : parts[1];
         if (yearStr === 'Present') {
