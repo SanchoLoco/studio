@@ -89,7 +89,6 @@ export const workExperiences = allExperiences
         const parts = period.split(' - ');
         const yearStr = position === 'start' ? parts[0] : parts[1];
         if (yearStr === 'Present') {
-            // "Present" is considered the current year for sorting purposes.
             return new Date().getFullYear();
         }
         return parseInt(yearStr, 10);
