@@ -107,6 +107,7 @@ export const workExperiences = allExperiences
     return bStartYear - aStartYear;
 });
 
+
 export const educationHistory = allExperiences
     .filter(e => e.type === 'education')
     .sort((a, b) => {
