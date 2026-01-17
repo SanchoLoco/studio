@@ -31,17 +31,17 @@ export const contactInfo = [
 
 const allExperiences = [
   {
-    role: "Accounting Practitioner",
-    company: "Ben-Gurion University",
-    period: "2023 - Present",
-    description: "Started by tutoring students in the reserves and now provide accounting practice sessions for students in face-to-face classroom settings.",
-    type: "work" as const
-  },
-  {
     role: "QA Engineer",
     company: "Kirobo",
     period: "2023 - 2025",
     description: "Manual and automatic QA testing for crypto-wallets and DeFi products. Writing and maintaining test automation scripts.",
+    type: "work" as const
+  },
+  {
+    role: "Accounting Practitioner",
+    company: "Ben-Gurion University",
+    period: "2023 - Present",
+    description: "Started by tutoring students in the reserves and now provide accounting practice sessions for students in face-to-face classroom settings.",
     type: "work" as const
   },
   {
