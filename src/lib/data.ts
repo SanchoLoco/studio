@@ -62,7 +62,7 @@ export const educationHistory = [
     degree: "B.A. in Management",
     institution: "Ben-Gurion University of The Negev",
     period: "2023 - 2026",
-    description: "3rd-year student at The Guilford Glazer Faculty Of Business And Management.",
+    description: "3rd-year student at The Faculty Of Business And Management.\nSpecializing in Entrepreneurship and Innovation. Degree from the EQUIS-accredited Guilford Glazer Faculty, focused on strategic business development, venture creation, and innovation management.",
   },
   {
     degree: "Transformational Program",
