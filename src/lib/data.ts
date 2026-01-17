@@ -82,11 +82,26 @@ const allExperiences = [
 ];
 
 export const workExperiences = allExperiences.filter(e => e.type === 'work').sort((a, b) => {
-    const aEnd = a.period.split(' - ')[1];
-    const bEnd = b.period.split(' - ')[1];
-    if (aEnd === 'Present') return -1;
-    if (bEnd === 'Present') return 1;
-    return parseInt(bEnd, 10) - parseInt(aEnd, 10);
+    const getYear = (period: string, position: 'start' | 'end') => {
+        const parts = period.split(' - ');
+        const yearStr = position === 'start' ? parts[0] : parts[1];
+        if (yearStr === 'Present') {
+            return Infinity;
+        }
+        return parseInt(yearStr, 10);
+    };
+
+    const aEndYear = getYear(a.period, 'end');
+    const bEndYear = getYear(b.period, 'end');
+
+    if (bEndYear !== aEndYear) {
+        return bEndYear - aEndYear;
+    }
+
+    const aStartYear = getYear(a.period, 'start');
+    const bStartYear = getYear(b.period, 'start');
+
+    return bStartYear - aStartYear;
 });
 
 export const educationHistory = allExperiences.filter(e => e.type === 'education').sort((a, b) => {
