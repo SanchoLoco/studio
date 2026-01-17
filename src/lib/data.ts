@@ -1,3 +1,4 @@
+
 import { Github, Linkedin, Mail, Sailboat } from 'lucide-react';
 
 export const profile = {
@@ -88,7 +89,8 @@ export const workExperiences = allExperiences
         const parts = period.split(' - ');
         const yearStr = position === 'start' ? parts[0] : parts[1];
         if (yearStr === 'Present') {
-            return Infinity;
+            // Use a high number to ensure "Present" is sorted as most recent, but not higher than future dates
+            return new Date().getFullYear();
         }
         return parseInt(yearStr, 10);
     };
