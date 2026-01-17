@@ -90,11 +90,9 @@ export const workExperiences = allExperiences.filter(e => e.type === 'work').sor
 });
 
 export const educationHistory = allExperiences.filter(e => e.type === 'education').sort((a, b) => {
-    const aEnd = a.period.split(' - ')[1];
-    const bEnd = b.period.split(' - ')[1];
-    if (aEnd === 'Present') return -1;
-    if (bEnd === 'Present') return 1;
-    return parseInt(bEnd, 10) - parseInt(aEnd, 10);
+    const aStart = a.period.split(' - ')[0];
+    const bStart = b.period.split(' - ')[0];
+    return parseInt(bStart, 10) - parseInt(aStart, 10);
 });
 
 
