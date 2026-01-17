@@ -34,7 +34,7 @@ const allExperiences = [
   {
     role: "Accounting Practitioner",
     company: "Ben-Gurion University",
-    period: "2023 - Present",
+    period: "2023 - 2024",
     description: "Started by tutoring students in the reserves and now provide accounting practice sessions for students in face-to-face classroom settings.",
     type: "work" as const
   },
@@ -89,7 +89,7 @@ export const workExperiences = allExperiences
         const parts = period.split(' - ');
         const yearStr = position === 'start' ? parts[0] : parts[1];
         if (yearStr === 'Present') {
-            return new Date().getFullYear();
+            return new Date().getFullYear() + 1;
         }
         return parseInt(yearStr, 10);
     };
