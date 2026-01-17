@@ -74,7 +74,7 @@ export const educationHistory = [
     degree: "Hacking Defined Experts",
     institution: "See-Security",
     period: "2012 - 2013",
-    description: "Hacking Defined Experts program.",
+    description: "An intensive, 400-hour offensive security certification from See-Security College specializing in advanced penetration testing, network exploitation, and web application hacking.",
   }
 ];
 
