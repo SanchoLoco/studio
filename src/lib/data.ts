@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail, Sailboat } from 'lucide-react';
 
 export const profile = {
   name: "Dror Teper",
@@ -14,13 +14,18 @@ export const contactInfo = [
     },
     {
         name: 'LinkedIn',
-        href: 'https://www.linkedin.com/in/drorteper',
+        href: 'https://www.linkedin.com/in/sanchofinance/',
         icon: Linkedin
     },
     {
         name: 'GitHub',
-        href: 'https://github.com/drorteper',
+        href: 'https://github.com/SanchoLoco',
         icon: Github
+    },
+    {
+        name: 'OpenSea',
+        href: 'https://opensea.io/0x02b9ecac6977814484dd8845a0ca84dd1abb3b0f',
+        icon: Sailboat
     }
 ];
 
