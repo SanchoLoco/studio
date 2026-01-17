@@ -12,18 +12,18 @@ export function EducationTimeline() {
           Education
         </h2>
         <div className="relative max-w-3xl mx-auto">
-          <div className="absolute left-1/2 -translate-x-1/2 w-0.5 h-full bg-border" aria-hidden="true"></div>
+          <div className="absolute left-6 -translate-x-1/2 md:left-1/2 w-0.5 h-full bg-border" aria-hidden="true"></div>
           
           {educationHistory.map((item, index) => (
-            <div key={index} className={`relative mb-8 flex justify-between items-start w-full`}>
-              <div className={`w-[calc(50%-2rem)] ${index % 2 === 0 ? 'order-1' : 'order-3 text-right'}`}>
+            <div key={index} className={`relative mb-8 md:flex md:justify-between items-start w-full`}>
+              <div className={`hidden md:block w-[calc(50%-2rem)] ${index % 2 === 0 ? 'order-1' : 'order-3'}`}>
               </div>
 
-              <div className="z-10 flex items-center justify-center w-12 h-12 rounded-full bg-background shadow-md order-2">
+              <div className="absolute md:relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-background shadow-md md:order-2">
                 <GraduationCap className="w-6 h-6 text-primary" />
               </div>
 
-              <div className={`w-[calc(50%-2rem)] ${index % 2 === 0 ? 'order-3' : 'order-1'}`}>
+              <div className={`pl-20 md:pl-0 w-full md:w-[calc(50%-2rem)] ${index % 2 === 0 ? 'md:order-3' : 'md:order-1'}`}>
                 <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300">
                   <CardHeader>
                     <div className="flex justify-between items-start flex-col sm:flex-row gap-2">
