@@ -31,17 +31,17 @@ export const contactInfo = [
 
 const allExperiences = [
   {
-    role: "QA Engineer",
-    company: "Kirobo",
-    period: "2023 - 2025",
-    description: "Manual and automatic QA testing for crypto-wallets and DeFi products. Writing and maintaining test automation scripts.",
-    type: "work" as const
-  },
-  {
     role: "Accounting Practitioner",
     company: "Ben-Gurion University",
     period: "2023 - Present",
     description: "Started by tutoring students in the reserves and now provide accounting practice sessions for students in face-to-face classroom settings.",
+    type: "work" as const
+  },
+  {
+    role: "QA Engineer",
+    company: "Kirobo",
+    period: "2023 - 2025",
+    description: "Manual and automatic QA testing for crypto-wallets and DeFi products. Writing and maintaining test automation scripts.",
     type: "work" as const
   },
   {
@@ -81,7 +81,9 @@ const allExperiences = [
   }
 ];
 
-export const workExperiences = allExperiences.filter(e => e.type === 'work').sort((a, b) => {
+export const workExperiences = allExperiences
+  .filter(e => e.type === 'work')
+  .sort((a, b) => {
     const getYear = (period: string, position: 'start' | 'end') => {
         const parts = period.split(' - ');
         const yearStr = position === 'start' ? parts[0] : parts[1];
@@ -104,11 +106,12 @@ export const workExperiences = allExperiences.filter(e => e.type === 'work').sor
     return bStartYear - aStartYear;
 });
 
-export const educationHistory = allExperiences.filter(e => e.type === 'education').sort((a, b) => {
-    const aStart = a.period.split(' - ')[0];
-    const bStart = b.period.split(' - ')[0];
-    return parseInt(bStart, 10) - parseInt(aStart, 10);
-});
+export const educationHistory = allExperiences
+    .filter(e => e.type === 'education')
+    .sort((a, b) => {
+        const getStartYear = (period: string) => parseInt(period.split(' - ')[0], 10);
+        return getStartYear(b.period) - getStartYear(a.period);
+    });
 
 
 export const skills = [
