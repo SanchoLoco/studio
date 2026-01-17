@@ -35,7 +35,7 @@ export const workExperiences = [
     role: "QA Engineer",
     company: "Kirobo",
     period: "2023 - 2025",
-    description: "Manual and automatic QA testing for crypto-wallets and DeFi products. Writing and maintaining test automation scripts.",
+    description: "Manual and automatic QA testing for crypto-wallets and DeFi products. Writing and maintaining test automation scripts.\nTesting no-code platform for building custom DeFi applications and complex transaction logic.\nTested the user-facing visual builder interface, focusing on user experience (UX) to ensure non-technical users could reliably create and deploy secure \"intents\" or smart transactions.\nValidated the execution of complex conditional logic across DeFi platforms, ensuring defined user conditions (e.g., price limits) were met on-chain.",
   },
   {
     role: "Accounting Practitioner",
@@ -56,7 +56,6 @@ export const workExperiences = [
     description: "Full mandatory 3 years service and continued working at prime minister office. Expertise in Cyber and Forensic, Research, development and integration of new equipment and technologies, Development experience with Linux, Windows, MacOS, Execution of QA for hardware and software in high strict standards, and performing of tutorials and courses for up to 30 people.",
   }
 ];
-
 
 export const educationHistory = [
   {
