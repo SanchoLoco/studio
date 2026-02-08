@@ -3,7 +3,7 @@
     {
       "id": "hero-portrait",
       "description": "A professional portrait of Dror Teper.",
-      "imageUrl": "https://github.com/SanchoLoco/studio/blob/main/DTCV.png",
+      "imageUrl": "/DTCV.png",
       "imageHint": "profile picture"
     }
   ]
